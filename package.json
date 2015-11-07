@@ -1,6 +1,7 @@
 {
   "name": "require-props",
-  "description": "",
+  "description": "Require a set of modules, and add them as properties to target.",
+  "keywords": ["require", "module"],
   "repository": "https://github.com/parro-it/require-props.git",
   "bugs": {
     "url": "https://github.com/parro-it/require-props/issues"

@@ -1,6 +1,6 @@
 # require-props
 
-Require a set of modules, and add them as a property to target.
+Require a set of modules, and add them as properties to target.
 
 [![NPM module](https://img.shields.io/npm/v/require-props.svg)](https://npmjs.org/package/require-props)
 [![NPM downloads](https://img.shields.io/npm/dt/require-props.svg)](https://npmjs.org/package/require-props)

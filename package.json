@@ -24,10 +24,8 @@
   "eslintConfig": {
     "extends": "devenv"
   },
-  "babel": {
-    "stage": 4
-  },
   "devDependencies": {
+    "is-plain-obj": "^1.1.0",
     "tape-async": ">1.0.0"
   },
   "install-this-global-to-develop": {

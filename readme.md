@@ -1,14 +1,9 @@
 # require-props
 
+Require a set of modules, and add them as a property to target.
 
-
-[![Travis Build Status](https://img.shields.io/travis/parro-it/require-props.svg)](http://travis-ci.org/parro-it/require-props)
 [![NPM module](https://img.shields.io/npm/v/require-props.svg)](https://npmjs.org/package/require-props)
 [![NPM downloads](https://img.shields.io/npm/dt/require-props.svg)](https://npmjs.org/package/require-props)
-
-[![Code Climate score](https://img.shields.io/codeclimate/github/parro-it/require-props.svg)](https://codeclimate.com/github/parro-it/require-props)
-[![Tests coverage](https://img.shields.io/codeclimate/coverage/github/parro-it/require-props.svg)](https://codeclimate.com/github/parro-it/require-props)
-[![Dependencies status](https://img.shields.io/requires/github/parro-it/require-props.svg)](https://requires.io/github/parro-it/require-props/requirements/?branch=master)
 
 ## Installation
 
@@ -16,17 +11,29 @@
 npm install --save require-props
 ```
 
-## How it works
-
 ## Usage
 
 ```javascript
-  import requireProps from 'require-props'
+  const requireProps = require('require-props')(__dirname);
+  const target = {name:'target'};
+  requireProps(target, ['./fixtures/module1', './fixtures/module-2']);
+  console.dir(target);
+  // { name: 'target', module1: 1, 'module-2': 'target' }
 ```
 
-## Credits
+Each required modules must export a function receiving the app instance and returning an object that is then added as a property
+on the app instance, named as the modules itself.
+
+## Api
+
+requireProps(target, modules)
+
+* target: object - object where all properties are created
+* modules: array - list of modules to requires. They could be module names or relative paths.
+
 
 ## License
+
 The MIT License (MIT)
 
 Copyright (c) 2015 Andrea Parodi

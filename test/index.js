@@ -1,7 +1,16 @@
 const test = require('tape-async');
-const requireProps = require('..');
+const requireProps = require('..')(__dirname);
 
-test('add details files', function *(t) {
-  const result = yield requireProps();
-  t.equal(result, 42);
+
+test('work with absolute paths', t => {
+  const target = {name: 'target'};
+  requireProps(target, ['is-plain-obj']);
+  t.deepEqual(target, {name: 'target', 'is-plain-obj': true});
+});
+
+
+test('work with relative paths', t => {
+  const target = {name: 'target'};
+  requireProps(target, ['./fixtures/module1', './fixtures/module-2']);
+  t.deepEqual(target, { name: 'target', module1: 1, 'module-2': 'target' });
 });

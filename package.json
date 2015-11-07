@@ -1,12 +1,15 @@
 {
   "name": "require-props",
   "description": "Require a set of modules, and add them as properties to target.",
-  "keywords": ["require", "module"],
+  "keywords": [
+    "require",
+    "module"
+  ],
   "repository": "https://github.com/parro-it/require-props.git",
   "bugs": {
     "url": "https://github.com/parro-it/require-props/issues"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "src/index.js",
   "engines": {
     "node": ">=4.1"
